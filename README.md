@@ -1,6 +1,9 @@
 # Transfer Logs To N0C Storage
 
-![noc-logo.png](doc/noc-logo.svg)
+<div>
+   <img src="doc/noc-logo.svg" width="200" alt="N0C">
+</div>
+<br>
 
 This is a JavaScript script that can be used to transfer logs from your server to N0C Storage.
 
@@ -33,7 +36,7 @@ archives and items that do not require a high-performance disk (SSD).
 
    ![terminal.png](doc/terminal.png)
 
-2. Source the application environment
+1. Source the application environment
    ```bash
    source /home/username/nodevenv/myapp/20/bin/activate
    ```
@@ -43,23 +46,23 @@ archives and items that do not require a high-performance disk (SSD).
    You can find the correct command in the application tab.
 
    ![source-command.png](doc/source-command.png)
-3. Install the required packages
+2. Install the required packages
    ```bash
    npm install minio dotenv
    ```
    
    If you are using a different S3 SDK, replace `minio` with the correct package name.
-4. Create a folder for the script
+3. Create a folder for the script
 
    ```bash
    mkdir /home/username/cron-scripts/transfer-logs/
    ```
    
-5. Create a new file in the folder
+4. Create a new file in the folder
    ```bash
    touch /home/username/cron-scripts/transfer-logs/transfer-logs-to-n0c-storage.js
    ```
-6. Copy the script content from the repository to the file
+5. Copy the script content from the repository to the file
    ```bash
    nano /home/username/cron-scripts/transfer-logs/transfer-logs-to-n0c-storage.js
    ```
@@ -68,12 +71,12 @@ archives and items that do not require a high-performance disk (SSD).
    **Note:** Alternatively, steps 4-6 can be done via N0C's file manager.
 
    ![filebrowser.png](doc/filebrowser.png)
-7. Create a `.env` file in the same folder
+6. Create a `.env` file in the same folder
    ```bash
    touch /home/username/cron-scripts/transfer-logs/.env
    ```
    
-8. Add the following content to the `.env` file, replacing the placeholders with your data
+7. Add the following content to the `.env` file, replacing the placeholders with your data
    ```bash
    S3_BUCKET=bucketname
    S3_HOST=hostname
@@ -91,7 +94,7 @@ archives and items that do not require a high-performance disk (SSD).
    
    **Note:** Your N0C Storage credentials can be found here:
    ![n0c-storage-creds.png](doc/n0c-storage-creds.png)
-9. Create the cron job via the interface
+8. Create the cron job via the interface
    
    ![new-cron.png](doc/new-cron.png)
 
