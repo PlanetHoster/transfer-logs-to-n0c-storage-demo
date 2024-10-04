@@ -1,5 +1,7 @@
 # Transfer Logs To N0C Storage
 
+![noc-logo.png](doc/noc-logo.svg)
+
 This is a JavaScript script that can be used to transfer logs from your server to N0C Storage.
 
 Consequently, this allows you to save space and avoid cluttering your SSD, while still keeping your logs accessible.
